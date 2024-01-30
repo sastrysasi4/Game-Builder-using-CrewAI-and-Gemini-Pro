@@ -7,7 +7,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-llm_vertex = ChatGoogleGenerativeAI(model="gemini-pro",
+llm = ChatGoogleGenerativeAI(model="gemini-pro",
                              verbose=True,
                              temperature=0.3,
                              google_api_key=GOOGLE_API_KEY)
@@ -28,7 +28,7 @@ senior_engineer_agent = Agent(
 				produce perfect code""",
     allow_delegation=False,
     verbose=True,
-    llm=llm_vertex
+    llm=llm
     )
 
 qa_engineer_agent = Agent(
@@ -43,7 +43,7 @@ qa_engineer_agent = Agent(
   			You also check for security vulnerabilities, and logic errors""",
     allow_delegation=False,
     verbose=True,
-    llm=llm_vertex
+    llm=llm
     )
 
 chief_qa_engineer_agent = Agent(
@@ -54,7 +54,7 @@ chief_qa_engineer_agent = Agent(
 				super dedicate to make high quality code.""",
     allow_delegation=True,
     verbose=True,
-    llm=llm_vertex
+    llm=llm
     )
 
 
