@@ -1,0 +1,2 @@
+Create a game where the basket is moving from left to right and balls are going to fall down, and the goal of the player is to catch as many balls as possible. The more balls the player catches, the faster the balls fall from the top.
+If a player drops three balls, his points are the number of balls he caught before losing.Your final answer must be the Python code, only the Python code, and nothing else.
